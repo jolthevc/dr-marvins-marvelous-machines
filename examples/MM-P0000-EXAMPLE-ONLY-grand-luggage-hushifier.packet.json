@@ -1,0 +1,72 @@
+{
+  "schema_version": "dmmm_post_v1",
+  "idea_id": "MM-I0000",
+  "post_id": "MM-P0000",
+  "revision": 1,
+  "brand": "Dr. Marvin's Marvelous Machines",
+  "canvas": {"width": 1080, "height": 1350, "slide_count": 4},
+  "title": "THE GRAND LUGGAGE HUSHIFIER",
+  "engineering": {
+    "annoyance": "Hard suitcase wheels chatter loudly while being dragged across tiled public floors.",
+    "current_workaround": "Carry the suitcase, endure the racket, or choose alternative luggage with no guaranteed noise result.",
+    "object_form": "Small carry-on suitcase with interchangeable soft-tread wheel cartridges and floating mounts.",
+    "operating_principle": "Softer contact materials can mitigate hard-surface chatter; compliant mounts can isolate vibration transmitted into the case body.",
+    "mechanism_assumptions": "Noise will depend on wheel material, speed, suitcase load, floor surface, weather, wheel wear and implementation. No testing has occurred.",
+    "tradeoff": "Soft wheel treads may wear faster and isolation adds weight, replacement parts and mechanical complexity.",
+    "novelty_note": "For illustrative calibration only. Existing soft luggage wheels and damping approaches may overlap; no prior-art review has been conducted."
+  },
+  "art_brief": {
+    "prompt": "Draw a single complete, magnificently eccentric but mechanically credible carry-on suitcase called the Grand Luggage Hushifier. Show four surprisingly sophisticated removable soft-tread wheel cartridges, visibly elastically isolated wheel mounts, and protected bearing housings, with a tiny overdone mechanical HUSH selector on the side but no visible wording. Three-quarter product view, full object visible, whimsical Victorian inventor patent engraving, exquisite black charcoal pen strokes and delicate crosshatching, balanced linework, minimal sparse red pencil construction marks, meticulous physical proportions, subtle eccentricity, centered with abundant negative space. Transparent background preferred or perfectly uniform #F2E8D3. No typography, letters, numbers, labels, stamps, logos, borders, watermark, people, photoreal advertising, or glossy CGI.",
+    "alt_text": "Technical pen-and-ink illustration of a small carry-on suitcase with unusual soft wheels and floating wheel cartridges.",
+    "asset_uri": null,
+    "approved": false
+  },
+  "slides": {
+    "slide_1": {
+      "type": "invention",
+      "header": "FROM DR. MARVIN'S LABORATORY",
+      "title": "THE GRAND LUGGAGE HUSHIFIER",
+      "hook": "I refuse to let another airport hear the entire contents of my suitcase.",
+      "concept_label": "CONCEPT DESIGN"
+    },
+    "slide_2": {
+      "type": "problem",
+      "header": "A MOST DREADFUL PROBLEM",
+      "heading": "A CATASTROPHE ON WHEELS",
+      "body": "For years I have endured the dreadful racket of luggage crossing a tiled floor. We can carry a passenger across an ocean in a pressurized aluminum tube, yet the final fifty yards sound like an overturned cutlery drawer. An embarrassment to civilization."
+    },
+    "slide_3": {
+      "type": "solution",
+      "header": "THE STROKE OF GENIUS",
+      "mechanical_thesis": "Replace clatter with a carefully engineered glide, and make the wheel assembly repairable.",
+      "features": [
+        {"title": "VELVET-FOOTED ROLLERS", "explanation": "Replaceable soft treads aim to reduce the hard clatter of plastic wheels on tile."},
+        {"title": "THE FLOATING AXLE", "explanation": "Compliant mounts interrupt some of the vibration that would otherwise rattle through the case."},
+        {"title": "THE GREAT BEARING SEAL", "explanation": "Protected wheel bearings help keep grit away from an entirely unnecessary percussion section."}
+      ]
+    },
+    "slide_4": {
+      "type": "verdict",
+      "header": "GENIUS OR MADNESS?",
+      "question": "Would you install my Hushifier, or have we all simply agreed to drag our dignity behind us?",
+      "left_verdict": "GENIUS",
+      "right_verdict": "MADNESS",
+      "comment_cta": "CAST YOUR VERDICT IN THE COMMENTS"
+    }
+  },
+  "caption": "I have spent an unreasonable amount of time listening to suitcase wheels commit crimes against polished airport floors. My proposed cure: softer treads, floating wheel mounts, and a little less public embarrassment.\n\nWould you give this a spin, or return me to my laboratory? Fictional concept, not a product for sale.",
+  "lifecycle": {
+    "status": "PACKAGED",
+    "published_url": null,
+    "published_date": null,
+    "artwork_references": [],
+    "export_references": []
+  },
+  "qa": {
+    "editorial_review": "PASS",
+    "mechanism_review": "PASS",
+    "claims_review": "PASS",
+    "render_review": "BLOCKED_NOT_RENDERED",
+    "review_notes": "ILLUSTRATIVE EXAMPLE ONLY. Not part of the canonical idea registry, not illustrated, not rendered, not published."
+  }
+}

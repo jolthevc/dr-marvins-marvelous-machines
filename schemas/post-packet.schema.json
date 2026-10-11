@@ -1,0 +1,387 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dr Marvin Four-Slide Packet v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "idea_id",
+    "post_id",
+    "revision",
+    "brand",
+    "canvas",
+    "title",
+    "engineering",
+    "art_brief",
+    "slides",
+    "caption",
+    "lifecycle",
+    "qa"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "dmmm_post_v1"
+    },
+    "idea_id": {
+      "type": "string",
+      "pattern": "^MM-I\\d{4}$"
+    },
+    "post_id": {
+      "type": "string",
+      "pattern": "^MM-P\\d{4}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "brand": {
+      "const": "Dr. Marvin's Marvelous Machines"
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height",
+        "slide_count"
+      ],
+      "properties": {
+        "width": {
+          "const": 1080
+        },
+        "height": {
+          "const": 1350
+        },
+        "slide_count": {
+          "const": 4
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 100
+    },
+    "engineering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "annoyance",
+        "current_workaround",
+        "object_form",
+        "operating_principle",
+        "mechanism_assumptions",
+        "tradeoff",
+        "novelty_note"
+      ],
+      "properties": {
+        "annoyance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_workaround": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object_form": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operating_principle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mechanism_assumptions": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tradeoff": {
+          "type": "string",
+          "minLength": 1
+        },
+        "novelty_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "art_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prompt",
+        "alt_text",
+        "asset_uri",
+        "approved"
+      ],
+      "properties": {
+        "prompt": {
+          "type": "string",
+          "minLength": 220
+        },
+        "alt_text": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 280
+        },
+        "asset_uri": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "slides": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slide_1",
+        "slide_2",
+        "slide_3",
+        "slide_4"
+      ],
+      "properties": {
+        "slide_1": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "header",
+            "title",
+            "hook",
+            "concept_label"
+          ],
+          "properties": {
+            "type": {
+              "const": "invention"
+            },
+            "header": {
+              "const": "FROM DR. MARVIN'S LABORATORY"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 4,
+              "maxLength": 100
+            },
+            "hook": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 180
+            },
+            "concept_label": {
+              "const": "CONCEPT DESIGN"
+            }
+          }
+        },
+        "slide_2": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "header",
+            "heading",
+            "body"
+          ],
+          "properties": {
+            "type": {
+              "const": "problem"
+            },
+            "header": {
+              "const": "A MOST DREADFUL PROBLEM"
+            },
+            "heading": {
+              "type": "string",
+              "minLength": 5,
+              "maxLength": 85
+            },
+            "body": {
+              "type": "string",
+              "minLength": 50,
+              "maxLength": 650
+            }
+          }
+        },
+        "slide_3": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "header",
+            "mechanical_thesis",
+            "features"
+          ],
+          "properties": {
+            "type": {
+              "const": "solution"
+            },
+            "header": {
+              "const": "THE STROKE OF GENIUS"
+            },
+            "mechanical_thesis": {
+              "type": "string",
+              "maxLength": 175
+            },
+            "features": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "explanation"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 60
+                  },
+                  "explanation": {
+                    "type": "string",
+                    "minLength": 15,
+                    "maxLength": 190
+                  }
+                }
+              }
+            }
+          }
+        },
+        "slide_4": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "header",
+            "question",
+            "left_verdict",
+            "right_verdict",
+            "comment_cta"
+          ],
+          "properties": {
+            "type": {
+              "const": "verdict"
+            },
+            "header": {
+              "const": "GENIUS OR MADNESS?"
+            },
+            "question": {
+              "type": "string",
+              "minLength": 20,
+              "maxLength": 250
+            },
+            "left_verdict": {
+              "const": "GENIUS"
+            },
+            "right_verdict": {
+              "const": "MADNESS"
+            },
+            "comment_cta": {
+              "const": "CAST YOUR VERDICT IN THE COMMENTS"
+            }
+          }
+        }
+      }
+    },
+    "caption": {
+      "type": "string",
+      "minLength": 30,
+      "maxLength": 750
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "published_url",
+        "published_date",
+        "artwork_references",
+        "export_references"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PACKAGED",
+            "ILLUSTRATED",
+            "RENDERED",
+            "PUBLISHED"
+          ]
+        },
+        "published_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "published_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artwork_references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "export_references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "editorial_review",
+        "mechanism_review",
+        "claims_review",
+        "render_review",
+        "review_notes"
+      ],
+      "properties": {
+        "editorial_review": {
+          "enum": [
+            "PASS",
+            "NEEDS_REVISION",
+            "NOT_RUN"
+          ]
+        },
+        "mechanism_review": {
+          "enum": [
+            "PASS",
+            "NEEDS_REVISION",
+            "NOT_RUN"
+          ]
+        },
+        "claims_review": {
+          "enum": [
+            "PASS",
+            "NEEDS_REVISION",
+            "NOT_RUN"
+          ]
+        },
+        "render_review": {
+          "enum": [
+            "PASS",
+            "BLOCKED_NOT_RENDERED",
+            "NEEDS_REVISION",
+            "NOT_RUN"
+          ]
+        },
+        "review_notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

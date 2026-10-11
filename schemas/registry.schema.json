@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dr Marvin Registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "brand",
+    "next_idea_number",
+    "next_post_number",
+    "ideas"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "dmmm_registry_v1"
+    },
+    "brand": {
+      "const": "Dr. Marvin's Marvelous Machines"
+    },
+    "next_idea_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "next_post_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "ideas": {
+      "type": "array",
+      "items": {
+        "$ref": "idea.schema.json"
+      }
+    }
+  }
+}

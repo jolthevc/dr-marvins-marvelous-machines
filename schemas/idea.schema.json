@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dr Marvin Idea v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "idea_id",
+    "name",
+    "aliases",
+    "problem",
+    "existing_workaround",
+    "mechanism",
+    "madness",
+    "visual_concept",
+    "novelty_note",
+    "scores",
+    "status",
+    "tags",
+    "related_ids",
+    "post_id",
+    "post_packet_path"
+  ],
+  "properties": {
+    "idea_id": {
+      "type": "string",
+      "pattern": "^MM-I\\d{4}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "problem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "existing_workaround": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mechanism": {
+      "type": "string",
+      "minLength": 1
+    },
+    "madness": {
+      "type": "string",
+      "minLength": 1
+    },
+    "visual_concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "novelty_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relatability",
+        "ingenuity",
+        "madness",
+        "visual_clarity",
+        "shareability",
+        "product_desire"
+      ],
+      "properties": {
+        "relatability": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "ingenuity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "madness": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "visual_clarity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "shareability": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "product_desire": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "PROPOSED",
+        "SELECTED",
+        "PACKAGED",
+        "ILLUSTRATED",
+        "RENDERED",
+        "PUBLISHED",
+        "HOLD",
+        "REJECTED"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^MM-I\\d{4}$"
+      }
+    },
+    "post_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^MM-P\\d{4}$"
+    },
+    "post_packet_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "editorial_notes": {
+      "type": "string"
+    }
+  }
+}
